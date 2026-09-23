@@ -1,0 +1,11 @@
+# Admin panel — place as public_html/admin/.htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /admin/
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>

@@ -1,0 +1,23 @@
+# Customer web app (React) — place as public_html/.htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # API lives on subdomain or separate folder — do not rewrite /api here if you add a folder later
+  RewriteRule ^api/ - [L]
+
+  # Admin static app under /admin/
+  RewriteRule ^admin/ - [L]
+
+  # Existing files and folders
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
