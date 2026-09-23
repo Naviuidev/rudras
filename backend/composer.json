@@ -1,0 +1,15 @@
+{
+  "name": "rudras/farm-fresh-api",
+  "description": "Rudras Farm Fresh REST API",
+  "type": "project",
+  "require": {
+    "php": ">=8.0",
+    "firebase/php-jwt": "^6.10",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

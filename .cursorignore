@@ -1,0 +1,8 @@
+mobile/assets/
+backend/vendor/
+backend/uploads/
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.webp

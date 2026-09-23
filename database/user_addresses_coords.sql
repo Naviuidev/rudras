@@ -1,0 +1,5 @@
+USE rudras_farm_fresh;
+
+ALTER TABLE user_addresses
+  ADD COLUMN lat DECIMAL(10, 7) NULL DEFAULT NULL AFTER pincode,
+  ADD COLUMN lng DECIMAL(10, 7) NULL DEFAULT NULL AFTER lat;

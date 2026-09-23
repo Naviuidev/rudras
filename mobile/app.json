@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Rudras Farm Fresh",
+    "slug": "rudras-farm-fresh",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-screen.png",
+      "backgroundColor": "#ffffff",
+      "resizeMode": "cover"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rudrasfarmfresh.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Rudra's Farm Fresh uses your location to confirm we deliver to your area and to save your delivery address."
+      }
+    },
+    "android": {
+      "package": "com.rudrasfarmfresh.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#d9e8c9"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-notifications",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Rudra's Farm Fresh uses your location to confirm we deliver to your area and to save your delivery address."
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "http://localhost:8000/api"
+    },
+    "env": {
+      "EXPO_PUBLIC_API_URL": "http://localhost:8000/api"
+    }
+  }
+}
